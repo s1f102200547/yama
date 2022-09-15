@@ -13,7 +13,7 @@ def result():
         tell_result = "電話番号登録完了"
     else:
         tell_result = "電話番号失敗"
-    if  re.fullmatch("[1-9]{3}-([1-9]{4}|[1-9]{2})", request.form.get("addressnumber")):
+    if  re.fullmatch("[1-9]{3}-([1-9]{4})|([1-9]{2})", request.form.get("addressnumber")):
         address_result = "郵便番号登録完了"
     else:
         address_result ="郵便番号登録失敗"

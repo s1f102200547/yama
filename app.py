@@ -17,7 +17,7 @@ def result():
         address_result = "郵便番号登録完了"
     else:
         address_result ="郵便番号登録失敗"
-    if re.fullmatch("\.+@\.", request.form.get("mail")):
+    if re.fullmatch(".+@.+", request.form.get("mail")):
         mail_result = "メールアドレス登録完了"
     else:
         mail_result = "メールアドレス登録失敗"

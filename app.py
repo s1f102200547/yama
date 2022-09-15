@@ -8,7 +8,8 @@ def top():
 
 @app.route("/result", methods=["POST"])
 def result():
-    if re.fullmatch("(070|080|090)-[0-9]{4}-[0-9]{4}", request.form.get("tell")):
+    print(request.form.get("tell"))
+    if re.fullmatch("(070|080|090)[0-9]{4}[0-9]{4}", request.form.get("tell")):
         result = "完了"
     else:
         result = "失敗" 
